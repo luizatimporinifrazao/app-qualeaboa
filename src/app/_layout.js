@@ -1,25 +1,21 @@
-//=========================================================
-//              moldura que envolve a tela
-//=========================================================
+// ===================================================
+// A "MOLDURA" que envolve todas as telas do app
+// ===================================================
 
-//conceito: import
-//traz pra cá uma ferramenta que já criou
+// CONCEITO: import
+// "Import" traz para cá uma ferramenta que outra pessoa já criou!!
 
-//stack "pilha de telas"
+// Stack: "pilha de telas". Quando o app tem várias telas, uma abre por cima da outra, como cartas empilhadas. Vem do pacote expo-router.
+import  { Stack } from "expo-router";
 
-
-import { Stack } from "expo-router";
-
-//statusBar= barra e cima do celular
-
+// StatusBar = a barra lá em cima do celular (relógio, bateria, sinal)
 import { StatusBar } from "expo-status-bar";
 
 // CONCEITO
-// No React native, cada pedaço de tela é um componente.
+// NO React native, cada pedaço de tela é um componente.
 // Um componente é só uma FUNÇÃO que devolve (return) o que aparece.
 
-// essa função default é a função principal deste arquivo, é assim que o Expo Router
-// encontra o layout
+// essa função default é a função principal deste arquivo, é assim que o Expo Router encontra o layout
 export default function layout() {
     return (
         <>
@@ -27,10 +23,8 @@ export default function layout() {
             <StatusBar style="light"/>
             {/* Stack: a pilha de telas */}
             {/* ScreenOptions: opções que valem para todas telas */}
-            {/* headerShown: esconde a barra de titulo que o expo coloca no topo por
-            padrão */}
-            <Stack screenOptions={{ headerShown: false }}/>
+            {/* headerShown: esconde a barra de titulo que o expo coloca no topo por padrão */}
+            <Stack screenOptions={{ headerShown: false}}/>
         </>
     );
 }
-
